@@ -18,10 +18,31 @@
             padding: 0;
             box-sizing: border-box;
         }
-        #map { 
-            height: 80vh;
-            width: 60vw;
-            border-radius: 5px;
+        .logo img {
+            width: 180px;
+        }
+        .logo {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+        .tit {
+            font: 600 50px 'Poppins', sans-serif;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.551);
+        }
+        .sub {
+            font: 600 28px 'Poppins', sans-serif;
+            color: rgb(192, 8, 8);
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.551);
+        }
+        .text {
+            margin-top: 35px;
+        }
+        body {
+            background-image: url(coringa.jpg);
         }
         .container{
             display: flex;
@@ -31,14 +52,23 @@
             align-items: center;
             flex-direction: column;
         }
+        #map { 
+            margin-top: -100px;
+            height: 500px;
+            width: 650px;
+            border-radius: 15px;
+        }
     </style>
     
 </head>
 <body>
-    <div class="fundo">
-        <div class="container">
-            <div id="map"></div>
-        </div>
+    <div class="logo"><img src="escudo.png" alt=""></div>
+    <div class="text">
+        <h1 class="tit">Neo Química Arena Corinthians</h1>
+        <h2 class="sub">localize agora!</h2>
+    </div>
+    <div class="container">
+        <div id="map"></div>
     </div>
 
 
@@ -61,7 +91,7 @@
         L.Routing.control({
             waypoints: [
                 L.latLng(la, lo), 
-                L.latLng(-23.545333071199533, -46.47431503068459,) 
+                L.latLng(-23.545333071199533, -46.47431503068459) 
             ]
         }).addTo(map);}
 
